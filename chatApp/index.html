@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="js/scrpt.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://www.fontonline.ir/css/BRoya.css' rel='stylesheet' type='text/css'>
+    <title>ChatApp</title>
+</head>
+<body>
+    <div id="center-text">
+        <h2 style="color: mediumseagreen;">چت ما</h2>
+        <p class="text-muted font-weight-bold">برای تماس با ما دکمه را لمس دهید </p>
+      </div> 
+    <div id="body"> 
+      
+    <div id="chat-circle" class="btn btn-raised">
+            <div id="chat-overlay"></div>
+                <i class="material-icons">stream</i>
+        </div>
+      
+      <div class="chat-box">
+        <div class="chat-box-header">
+          <i class="material-icons" id="circle">circle</i>
+          <span class="img-round">آنلاین</span>
+          <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+          <button type="submit" class="call-submit" id="call-submit"><i class="material-icons">call</i></button>
+          <span class="person-detail" id="person-detail">علی آماده پاسخگویی</span>
+
+        </div>
+        <div class="chat-box-body">
+          <div class="chat-box-overlay">   
+          </div>
+          <div class="chat-logs">
+           
+          </div><!--chat-log -->
+        </div>
+        <div class="chat-input">      
+          <form>
+            <input type="text" id="chat-input" placeholder="...."/>
+          <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+          <button type="submit" class="file-submit" id="file-submit"><i class="material-icons">link</i></button>
+          </form>      
+        </div>
+      </div>
+
+    </div>
+</body>
+</html>
