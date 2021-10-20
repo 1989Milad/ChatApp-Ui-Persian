@@ -13,6 +13,7 @@ html, body {
     
   }
   #chat-circle {
+    z-index: 9999999999;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -63,10 +64,33 @@ html, body {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      display: none;
+      display: block;
+      z-index: 999999;
   }
   
-  
+  #in-msg{
+    position: relative;
+    text-align: center;
+    background-color:rgb(225, 255, 239);
+    max-width: 150px;
+    padding: 5px;
+    border-top-left-radius: 50px;
+    /* border-top-right-radius: 20px; */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  #out-msg{
+    position: relative;
+    text-align: center;
+    right:160px;
+    background-color:rgb(225, 255, 239);
+    max-width: 150px;
+    padding:10px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    /* border-bottom-left-radius: 50px; */
+    border-bottom-right-radius: 50px;
+  }
   .chat-box {
     display:none;
     background: #efefef;
@@ -81,8 +105,8 @@ html, body {
     box-shadow: 0px 5px 35px 9px #ccc;
   }
   .chat-box-toggle {
-    float:right;
-    margin-right:15px;
+    float:left;
+    margin-left:15px;
     cursor:pointer;
     transition: all .5s ease-in-out;
   }
@@ -141,16 +165,31 @@ html, body {
       margin-bottom: 0;
   }
   #chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: #ccc;
+    color: rgb(63, 63, 63);
   }
   #chat-input::-moz-placeholder { /* Firefox 19+ */
-    color: #ccc;
+    color: rgb(95, 95, 95);
   }
   #chat-input:-ms-input-placeholder { /* IE 10+ */
     color: #ccc;
   }
   #chat-input:-moz-placeholder { /* Firefox 18- */
     color: #ccc;
+  }
+  .emojis-submit {  
+    position:absolute;
+    bottom:3px;
+    left:10px;
+    background: transparent;
+    box-shadow:none;
+    border:none;
+    border-radius:50%;
+    color:rgb(87, 87, 87);
+    width:35px;
+    height:35px;  
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+
   }
   .chat-submit {  
     position:absolute;
@@ -169,7 +208,7 @@ html, body {
   }
   .call-submit {  
     position:absolute;
-    left:10px;
+    right:15px;
     background: transparent;
     box-shadow:none;
     border:none;
@@ -184,7 +223,7 @@ html, body {
   .file-submit {  
     position:absolute;
     bottom:3px;
-    right:50px;
+    left:40px;
     background: transparent;
     box-shadow:none;
     border:none;
@@ -209,19 +248,23 @@ html, body {
     cursor: help;
   
   }
-  .chat-submit:hover{
-      color: skyblue;
+  .emojis-submit:hover{
+      color: mediumseagreen;
   }
+  .chat-submit:hover{
+    color: mediumseagreen;
+}
   .file-submit:hover{
-    color: skyblue;
+    color: mediumseagreen;
   } 
   .call-submit:hover{
-    color: skyblue;
+    color: rgb(79, 79, 79);
   } 
   .chat-logs {
     padding:15px; 
     height:370px;
     overflow-y:scroll;
+    position: relative;
   }
   
   .chat-logs::-webkit-scrollbar-track
