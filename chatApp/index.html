@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,7 @@
         <div class="chat-box-header">
           <i class="material-icons" id="circle">circle</i>
           <span class="img-round">آنلاین</span>
-          <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+          <span class="chat-box-toggle" id="chat-close"><i class="material-icons">close</i></span>
           <button type="submit" class="call-submit" id="call-submit"><i class="material-icons">call</i></button>
           <span class="person-detail" id="person-detail">علی آماده پاسخگویی</span>
 
@@ -39,14 +39,19 @@
           <div class="chat-box-overlay">   
           </div>
           <div class="chat-logs">
-           
+           <p id="in-msg">سلام ، وقت بخیر</p>
+           <p id="out-msg">سلام ، وقتتون بخیر چطوری میتونم کمکتون کنم؟</p>
           </div><!--chat-log -->
         </div>
         <div class="chat-input">      
           <form>
-            <input type="text" id="chat-input" placeholder="...."/>
-          <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
-          <button type="submit" class="file-submit" id="file-submit"><i class="material-icons">link</i></button>
+            <input type="text" id="chat-input" placeholder="ارسال پیام ..."/>
+          <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons"><span class="material-icons-outlined">
+          send</i> </span>
+          <button type="submit" class="emojis-submit" id="emojis-submit"><i class="material-icons"><span class="material-icons-outlined">
+            insert_emoticon
+            </span></i></button>
+          <button type="submit" class="file-submit" id="file-submit"><i class="material-icons">file_upload</i></button>
           </form>      
         </div>
       </div>
